@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Francia DS | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+  <!--<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  integrity="sha512-9usAa10YV+q2+7b+QXr+6HjvQX9sVhHq+T2nHqz5lZlN1V8a3w5c5m"
+  crossorigin="anonymous" referrerpolicy="no-referrer"/>-->
   <link rel="stylesheet" href="port-style.css">
 </head>
 
@@ -34,7 +38,7 @@
         <div class="projects-grid">
           <div class="file-yellow">
             <div class="clip">
-                <img src="clip-yellow.png" alt="Clip">
+                <img src="picture/clip-yellow.png" alt="Clip">
               </div>
             <div class="project-card">
               <div class="project-tag">Web App</div>
@@ -43,27 +47,27 @@
               <a class="project-link" href="#">View Details →</a>
               <!--<div class="fold"><img src="picture/fold.jpg"></div>-->
               <div class="fold">
-                <img src="fold.jpg" alt="Fold">
+                <img src="picture/fold.jpg" alt="Fold">
               </div>
             </div>
           </div>
           <div class="file-purple">
             <div class="clip">
-                <img src="clip-purple.png" alt="Clip">
+                <img src="picture/clip-purple.png" alt="Clip">
               </div>
           <div class="project-card">
-            <div class="project-tag">E-Commerce Web App</div>
+            <div class="project-tag">E-Commerce Web</div>
             <div class="project-title">Wooden Furniture Shop</div><br>
             <div class="project-desc">Online furniture store that allows users to easily browse and purchase furniture online.</div>
             <a class="project-link" href="#">View Details →</a>
             <div class="fold">
-                <img src="fold.jpg" alt="Fold">
+                <img src="picture/fold.jpg" alt="Fold">
               </div>
           </div>
           </div>
           <div class="file-orens">
             <div class="clip">
-                <img src="clip-orens.png" alt="Clip">
+                <img src="picture/clip-orens.png" alt="Clip">
               </div>
           <div class="project-card">
             <div class="project-tag">Game App</div>
@@ -71,7 +75,7 @@
             <div class="project-desc">Simple game app to enhance the memory of user's aged 5-7 years old.</div>
             <a class="project-link" href="#">View Details →</a>
             <div class="fold">
-                <img src="fold.jpg" alt="Fold">
+                <img src="picture/fold.jpg" alt="Fold">
               </div>
           </div>
         </div>
@@ -82,12 +86,58 @@
     <!-- About -->
     <section class="about">
       <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+        
+          <div class="slider">
+
+          <div class="items" style="background-image: url(picture/6.png); border-radius: 18px;">
+          <div class="content">
+            <div class="caption">Passionate Problem Solver</div>
+            <div class="description">I am a Computer Science student who enjoys solving problems through clean and logical code. I focus on building functional and user-friendly systems. I am always learning to improve my skills and development practices.</div>
+          </div>
+          </div>
+          
+          <div class="items" style="background-image: url(picture/7.png); border-radius: 18px">
+            <div class="content">
+            <div class="caption">Aspiring Software Developer</div>
+            <div class="description">As a Computer Science student, I am building a strong foundation in software development. I enjoy creating web-based applications that solve real-world problems. I am motivated to grow and improve as a developer.</div>
+          </div>
+        </div>
+
+          <div class="items" style="background-image: url(picture/8.png); border-radius: 18px">
+            <div class="content">
+            <div class="caption">User-Focused Developer</div>
+            <div class="description">I am a Computer Science student interested in developing practical and user-friendly systems. I focus on creating clean interfaces and efficient functionality. I aim to build software that improves user experience.</div>
+          </div>
+        </div>
+
+        <div class="items" style="background-image: url(picture/9.png); border-radius: 18px">
+            <div class="content">
+            <div class="caption">Technology-Driven Learner</div>
+            <div class="description">As a Computer Science student, I enjoy learning and applying new technologies. I focus on improving my coding and software design skills. I strive to become a well-rounded developer.</div>
+          </div>
+        </div>
+
+        <div class="items" style="background-image: url(picture/10.png); border-radius: 18px">
+            <div class="content">
+            <div class="caption">Coffee Lover</div>
+            <div class="description">Powered by coffee and creativity, I enjoy turning ideas into working applications.</div>
+          </div>
+        </div>
+
+        <!--
         <h2 class="section-title">About Me</h2>
         <p>
           I specialize in building user-friendly and community-focused systems, particularly in healthcare and
           record management. I value clean UI, accessibility, and practical solutions that help users work
           more efficiently.
-        </p>
+        </p>-->
+        <div class="buttons">
+          <button class="prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+          <button class="next"><i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+        </div>
       </div>
     </section>
 
@@ -103,7 +153,7 @@
 
     <!-- Footer -->
     <footer>
-      © <span id="year"></span> Francia Delos Santos. All rights reserved.
+      © <span id="year"></span> Francia DS. All rights reserved.
     </footer>
 
     <script src="port.js"></script>
