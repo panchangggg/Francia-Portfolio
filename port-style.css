@@ -226,6 +226,10 @@
       font-size: 0.8rem;
       color: #2563eb;
       font-weight: 600;
+      background: #c9fdc2;
+      width: fit-content;
+      padding: 4px 8px;
+      border-radius: 4px;
   }
 
   .project-title {
@@ -283,4 +287,5 @@
       .hero-buttons {
           justify-content: center;
       }
+
   }
