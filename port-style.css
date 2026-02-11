@@ -89,7 +89,7 @@
   .hero-image {
       width: 260px;
       height: 260px;
-      background-image: url("picture/profile.jpg");
+      background-image: url("profile.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -200,4 +200,5 @@
       .hero-buttons {
           justify-content: center;
       }
+
   }
