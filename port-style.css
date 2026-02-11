@@ -11,7 +11,7 @@
 
 
   body {
-      background-image: url("port-bg.png");
+      background-image: url("picture/port-bg.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -19,6 +19,7 @@
       line-height: 1.6;
       margin: 0;
       min-height: 100vh;
+      overflow-x: hidden;
   }
 
   .glass-body {
@@ -103,7 +104,7 @@
   .hero-image {
       width: 260px;
       height: 260px;
-      background-image: url("prof1.jpg");
+      background-image: url("picture/prof1.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -202,11 +203,11 @@
   .fold img {
       position: absolute;
       bottom: 0;
-      right: 0;
+      left: 0;
       width: 60px;
       height: auto;
       pointer-events: none;
-      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
   }
 
   .project-card {
@@ -244,13 +245,148 @@
   }
 
   .project-link {
-      display: inline-block;
+      display: block;
       margin-top: 14px;
       font-weight: 600;
       color: #2563eb;
+      justify-self: flex-end;
   }
 
   /* About */
+  .slider {
+      position: relative;
+      margin: 0 auto;
+      width: 1000px;
+      height: 600px;
+      border: 3px solid #ffe98f;
+      border-radius: 20px;
+  }
+
+  .slider .items {
+      width: 200px;
+      height: 300px;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      background-position: 50% 50%;
+      background-size: cover;
+      display: inline-block;
+      transition: 0.5s;
+  }
+
+  .slider .items:nth-child(1),
+  .slider .items:nth-child(2) {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  .slider .items:nth-child(3) {
+      left: 70%;
+  }
+
+  .slider .items:nth-child(4) {
+      left: calc(70% + 220px);
+  }
+
+  .slider .items:nth-child(5) {
+      left: calc(70% + 440px);
+  }
+
+  .slider .items:nth-child(n + 6) {
+      left: calc(70% + 660px);
+      opacity: 0;
+  }
+
+  .items .content {
+      position: absolute;
+      top: 50%;
+      left: 100px;
+      width: 300px;
+      text-align: left;
+      color: #111111;
+      transform: translate(0, -50%);
+      /*font-family: 'Poppins', sans-serif;*/
+      font-family: system-ui;
+      display: none;
+  }
+
+  .slider .items:nth-child(2) .content {
+      display: block;
+  }
+
+  .content .caption {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0;
+      animation: animate 1s ease-in-out 1 forwards;
+  }
+
+  .content .description {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #363636;
+      opacity: 0;
+      animation: animate 1s ease-in-out 0.3s 1 forwards;
+  }
+
+  @keyframes animate {
+      from {
+          opacity: 0;
+          transform: translate(0, 100px);
+          filter: blur(33px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translate(0, 0);
+          filter: blur(0);
+      }
+  }
+
+  .buttons {
+      position: absolute;
+      bottom: 20px;
+      text-align: center;
+      width: 100%;
+      gap: 12px;
+      z-index: 1130;
+  }
+  .next {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #be9dcf;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+      border: 1px solid #fff;
+  }
+
+    .prev {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #da7d6f;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+        border: 1px solid #fff;
+    }
+
+  .next:hover, .prev:hover {
+      background: #9c7bb8;
+  }
+
   .about p {
       max-width: 800px;
       color: #555;
@@ -287,6 +423,4 @@
       .hero-buttons {
           justify-content: center;
       }
-
   }
-
