@@ -11,7 +11,7 @@
 
 
   body {
-      background-image: url("picture/port-bg.png");
+      background-image: url("port-bg.png");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -104,7 +104,7 @@
   .hero-image {
       width: 260px;
       height: 260px;
-      background-image: url("picture/prof1.jpg");
+      background-image: url("prof1.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -424,3 +424,4 @@
           justify-content: center;
       }
   }
+
