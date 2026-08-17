@@ -211,6 +211,12 @@ function openProjectModal(id) {
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
+
+  // Retrigger the flash/pop animation every time a project is opened
+  const modalBox = modal.querySelector('.modal-box');
+  modalBox.classList.remove('flash');
+  void modalBox.offsetWidth; // force reflow so the animation restarts
+  modalBox.classList.add('flash');
 }
 
 function closeProjectModal() {
