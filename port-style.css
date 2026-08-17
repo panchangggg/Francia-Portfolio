@@ -459,6 +459,66 @@ footer {
     opacity: 1;
 }
 
+/* Flash/pop-in effect on open */
+.modal-box.flash {
+    animation: modalFlashPop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+@keyframes modalFlashPop {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+    40% {
+        transform: scale(1.02);
+        opacity: 1;
+        box-shadow: 0 0 60px rgba(255, 235, 180, 0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/* Bright flash overlay behind the box */
+.modal-overlay.active::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.9);
+    pointer-events: none;
+    animation: overlayFlash 0.45s ease-out forwards;
+}
+
+@keyframes overlayFlash {
+    0% { opacity: 0.9; }
+    100% { opacity: 0; }
+}
+
+/* Staggered image pop-in */
+.modal-gallery img {
+    opacity: 0;
+    transform: scale(0.85);
+    animation: imagePopIn 0.4s ease forwards;
+}
+
+.modal-gallery img:nth-child(1) { animation-delay: 0.15s; }
+.modal-gallery img:nth-child(2) { animation-delay: 0.28s; }
+.modal-gallery img:nth-child(3) { animation-delay: 0.41s; }
+
+@keyframes imagePopIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .modal-close {
     position: absolute;
     top: 16px;
